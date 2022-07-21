@@ -39,3 +39,4 @@ var d4Result = document.getElementById("d4Result");
 var d4 = Math.floor(Math.random()*4+1);
   d4Result.innerHTML = d4;
 };
+

@@ -3,30 +3,40 @@
   padding: 0;
 }
 html {
-  background:#222;
+  background:rgb(82, 81, 132);
   color: #72d8d8;
   font-size: 1.5em;
   font-family: sans-serif;
 
 }
-.Contenedor {
-  background: #1a1a1a;
+.container {
+  background: #383838;
   width: 300px;
   height: 400px;
   margin: auto;
   padding: 50px 0;
 }
 
-.dadosArea {
+.areaDice {
   margin: 0 auto 30px auto;
   width: 150px;
   background: #676767;
   border-radius:10px;
 }
+.container-title{
+text-align: center;
+margin: 30px auto 30px;
+}
+.title{
+  padding-left: 35%;
+  text-align:center;
+  vertical-align: middle;
+  padding-top: 10%;
+}
 button {
   padding: 10px;
   margin-right: 30px;
-  background: #4F0404;
+  background: #2bb9b0;
   border: none;
   box-shadow: 3px 3px 3px #000;
   border-radius: 10px;
@@ -34,9 +44,10 @@ button {
 button:hover {
   box-shadow: inset 1px 1px 1px #000;
   cursor: pointer;
+  background:#218f88 ;
 }
 button:active {
-  background: #751717;
+  background: #34e8dc;
   box-shadow: inset 1px 1px 6px #000;
 }
 p {
