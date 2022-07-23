@@ -76,15 +76,19 @@ padding: auto;
   padding:5%;
 }
 
-.result{
-  text-align: justify;
-  padding: 10%;
+.sum{
+  text-align: center;
+  padding-top:1%;
 }
-
+.result{
+  text-align: center;
+  padding: 2%;
+  text-transform: uppercase;
+}
 .resultArea{
   margin: 10px 10px 30px 45%;
   width: 400px;
-  height:100px;
+  height:20%;
   background: rgb(45, 44, 94);
   border-radius:10px;
   text-align: center;

@@ -15,26 +15,27 @@
   </div>
     
   <div class="container">
-  <!-- DieBonus -->
-  <div class="bonusArea" >
-    <p class="bonus-title"> Bonus </p>
-    <input type="number" class="input" id="bonus" placeholder="+0" min="0" max="10" value="0">
-    
+
+    <!-- DieType -->
+  <div class="typeArea" >
+    <p class="bonus-title">Which die do you want? </p>
+    <input type="number" class="input" id="dieType" placeholder="20">
   </div>
   <!-- DieAmount -->
   <div class="amountArea" >
     <p class="bonus-title"> Amount of Die </p>
     <input type="number" class="input" id="amount" placeholder="1" min="0" max="100">
   </div>
-  <!-- DieType -->
-  <div class="typeArea" >
-    <p class="bonus-title">Which die do you want? </p>
-    <input type="number" class="input" id="dieType" placeholder="d20">
+    <!-- DieBonus -->
+  <div class="bonusArea" >
+    <p class="bonus-title"> Bonus </p>
+    <input type="number" class="input" id="bonus" placeholder="+0" min="0" max="10" value="0">
   </div>
-  <button onclick ="rollDie()"> Get to rolling</button>
+  <button onclick ="anySides()"> Get to rolling</button>
 
    <!-- Result -->
    <div class="resultArea">
+    <p id="Sum" class="sum"></p>
     <p id="Result" class="result"></p>  
   </div>
 </div>
