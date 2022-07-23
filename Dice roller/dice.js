@@ -1,42 +1,109 @@
-//--- D20 ---//
-function rollD20() {
-var d20Result = document.getElementById("d20Result");
-var d20 = Math.floor(Math.random()*20+1);
-  d20Result.innerHTML = d20;
+//--Bonus--//
+var bonus = document.querySelector("#bonus");
+
+//--Amount of Die--//
+var amount = document.querySelector("#amount");
+
+//--Type of Die--//
+
+var diceType = document.getElementById("dieType");
+
+
+
+function rollDie(){
+
+
+switch(Number(diceType.value)){
+
+
+    //--- D20 ---//
+case 20:
+
+    var d20Result = document.getElementById("Result");
+    
+    var d20 = (Math.floor(Math.random()*20+1)) * amount.value ;
+    
+    var sum = d20 + Number(bonus.value);
+    
+    d20Result.innerHTML = "Your d20 roll was: " + amount.value + "d20 + "  + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+
+    
+    //--- D12 ---//
+case 12:
+    var d12Result = document.getElementById("Result");
+    var d12 = Math.floor(Math.random()*12+1);
+    var sum = d12 + Number(bonus.value)
+      
+    d12Result.innerHTML = "Your d12 roll was: " + d12 +" + " + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+
+    //--- D10 ---//
+case 10:
+    var d10Result = document.getElementById("Result");
+    var d10 = Math.floor(Math.random()*10+1);
+    var sum = d10 + Number(bonus.value)
+      
+    d10Result.innerHTML = "Your d10 roll was: " + d10 +" + " + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+
+    //--- D8 ---//
+case 8:
+    var d8Result = document.getElementById("Result");
+    var d8 = Math.floor(Math.random()*8+1);
+    var sum = d8 + Number(bonus.value)
+      
+    d8Result.innerHTML = "Your d8 roll was: " + d8 +" + " + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+
+    
+    //--- D6 ---//
+case 6:
+    var d6Result = document.getElementById("Result");
+    var d6 = Math.floor(Math.random()*6+1);
+    var sum = d6 + Number(bonus.value)
+      
+    d6Result.innerHTML = "Your d6 roll was: " + d6 +" + " + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+    
+    //--- D4 ---//
+case 4:
+    var d4Result = document.getElementById("Result");
+    var d4 = Math.floor(Math.random()*4+1);
+    var sum = d4 + Number(bonus.value)
+      
+    d4Result.innerHTML = "Your d4 roll was: " + d4 +" + " + bonus.value + " = " + sum;
+
+    console.log(sum);
+
+    break;
+
+default:
+    var defaultResult = document.getElementById("Result");
+
+    defaultResult.innerHTML = "Please choose a die number from d20 to d4"
+
+}
+
 };
 
-//--- D12 ---//
-function rollD12() {
-var d12Result = document.getElementById("d12Result");
-var d12 = Math.floor(Math.random()*12+1);
-  d12Result.innerHTML = d12;
-};
 
-//--- D10 ---//
-function rollD10() {
-var d10Result = document.getElementById("d10Result");
-var d10 = Math.floor(Math.random()*10+1);
-  d10Result.innerHTML = d10;
-};
 
-//--- D8 ---//
-function rollD8() {
-var d8Result = document.getElementById("d8Result");
-var d8 = Math.floor(Math.random()*8+1);
-  d8Result.innerHTML = d8;
-};
 
-//--- D6 ---//
-function rollD6() {
-var d6Result = document.getElementById("d6Result");
-var d6 = Math.floor(Math.random()*6+1);
-  d6Result.innerHTML = d6;
-};
 
-//--- D6 ---//
-function rollD4() {
-var d4Result = document.getElementById("d4Result");
-var d4 = Math.floor(Math.random()*4+1);
-  d4Result.innerHTML = d4;
-};
 

@@ -10,32 +10,92 @@ html {
 
 }
 .container {
-  background: #383838;
   width: 300px;
-  height: 400px;
+  height: 650px;
   margin: auto;
-  padding: 50px 0;
+  padding:0 20% 20% 0;
+  border-radius:20px;
 }
 
 .areaDice {
-  margin: 0 auto 30px auto;
-  width: 150px;
-  background: #676767;
+  margin: 5% 50% 10% 45%;
+  padding:5%;
+  width: 350px;
+  height:150px;
+  background: rgb(45, 44, 94);
   border-radius:10px;
+  text-align: justify;
 }
+.bonusArea{
+margin: auto 40% auto 40%;
+width: 200px;
+background:rgb(45, 44, 94);
+border-radius: 10px;
+}
+.amountArea{
+  margin:auto auto auto 80%;
+  width: 200px;
+  background:rgb(45, 44, 94);
+  border-radius: 10px;
+  }
+
+.typeArea{
+  margin:auto auto auto 40%;
+  width: 200px;
+  background:rgb(45, 44, 94);
+  border-radius: 10px;
+  }
+
+.input{
+  margin: 10px 30px;
+  width:150px;
+  align-items: left;
+  background: rgb(26, 26, 64);
+  color: #72d8d8;
+}
+
+.bonus-title{
+text-align: center;
+margin: 10px auto 10px;
+}
+
 .container-title{
 text-align: center;
-margin: 30px auto 30px;
+margin: 3% 10% 2% 14%;
+padding: auto;
 }
+
 .title{
   padding-left: 35%;
   text-align:center;
   vertical-align: middle;
   padding-top: 10%;
 }
+
+.separator{
+  padding:5%;
+}
+
+.result{
+  text-align: justify;
+  padding: 10%;
+}
+
+.resultArea{
+  margin: 10px 10px 30px 45%;
+  width: 400px;
+  height:100px;
+  background: rgb(45, 44, 94);
+  border-radius:10px;
+  text-align: center;
+}
+
 button {
-  padding: 10px;
-  margin-right: 30px;
+  padding: 6%;
+  margin-left: 10%;
+  margin-bottom:5%;
+  margin-top:1%;
+  margin-right:1%;
   background: #2bb9b0;
   border: none;
   box-shadow: 3px 3px 3px #000;
@@ -49,9 +109,4 @@ button:hover {
 button:active {
   background: #34e8dc;
   box-shadow: inset 1px 1px 6px #000;
-}
-p {
-  display: inline; 
-  vertical-align: middle;
-  padding-top: 2px;
 }

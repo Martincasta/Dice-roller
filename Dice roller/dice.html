@@ -15,41 +15,30 @@
   </div>
     
   <div class="container">
-  <!-- d20 -->
-    <div class="areaDice">
-    <button onclick="rollD20()">d20</button>
-    <p id="d20Result"></p>  
+  <!-- DieBonus -->
+  <div class="bonusArea" >
+    <p class="bonus-title"> Bonus </p>
+    <input type="number" class="input" id="bonus" placeholder="+0" min="0" max="10" value="0">
+    
   </div>
+  <!-- DieAmount -->
+  <div class="amountArea" >
+    <p class="bonus-title"> Amount of Die </p>
+    <input type="number" class="input" id="amount" placeholder="1" min="0" max="100">
+  </div>
+  <!-- DieType -->
+  <div class="typeArea" >
+    <p class="bonus-title">Which die do you want? </p>
+    <input type="number" class="input" id="dieType" placeholder="d20">
+  </div>
+  <button onclick ="rollDie()"> Get to rolling</button>
 
-  <!-- d12 -->
-  <div class="areaDice">
-    <button onclick="rollD12()">d12</button>
-    <p id="d12Result"></p>  
+   <!-- Result -->
+   <div class="resultArea">
+    <p id="Result" class="result"></p>  
   </div>
-
-  <!-- d10 -->
-  <div class="areaDice">
-    <button onclick="rollD10()">d10</button>
-    <p id="d10Result"></p>  
-  </div>
-  
-  <!-- d8 -->
-  <div class="areaDice">
-    <button onclick="rollD8()">d8</button>
-    <p id="d8Result"></p>  
-  </div>
-  
-  <!-- d6 -->
-  <div class="areaDice">
-    <button onclick="rollD6()">d6</button>
-    <p id="d6Result"></p>  
-  </div>
-  
-  <!-- d4 -->
-  <div class="areaDice">
-    <button onclick="rollD4()">d4</button>
-    <p id="d4Result"></p>  
-  </div>
+</div>
+ 
    
 
 
