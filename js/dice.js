@@ -6,59 +6,65 @@ bonus.value = 1;
 var amount = document.querySelector("#amount");
 amount.value = 1;
 
-
 //--Type of Die--//
 
 var diceType = document.getElementById("dieType");
 diceType.value = "20";
 
 var total = [];
+var oldRolls = [];
 
-function anySides(){
+function anySides() {
+  var rolls = document.getElementById("oldRolls");
+  var everySum = document.getElementById("Sum");
+  var everyResult = document.getElementById("Result");
 
-    var everySum = document.getElementById("Sum");
-    var everyResult = document.getElementById("Result");
-    //-- This is where the math is saved up, the amount of sides is decided by the user--//
-    var anySides = (Math.floor(Math.random()*(diceType.value)+1));
+  //-- This is where the math is saved up, the amount of sides is decided by the user--//
+  var anySides = Math.floor(Math.random() * diceType.value + 1);
 
-    var total = [];
-    //-- This is where the die are rolled, always using the amount-1 for the math cause if it's 2 that's one die plus one die--//
-   for(var i = 1; i <= Number(amount.value); ++i){
-        
-    var firstDie = (Math.floor(Math.random()*(diceType.value)+1));
+  var total = [];
+  //-- This is where the die are rolled, always using the amount-1 for the math cause if it's 2 that's one die plus one die--//
+  for (var i = 1; i <= Number(amount.value); ++i) {
+    var firstDie = Math.floor(Math.random() * diceType.value + 1);
 
     total.push(firstDie);
+  }
 
-    console.log(total  + "+" + i);}
+  //-var severalDie = anySides + (Math.floor(Math.random()*(diceType.value)+1))*Number(amount.value-1);--//
+  //--If there's a bonus, it gets added here--//
+  var totalRoll = Number(
+    total.reduce((a, b) => a + b, 0) + Number(bonus.value)
+  );
 
+  oldRolls.push(totalRoll);
 
-    //-var severalDie = anySides + (Math.floor(Math.random()*(diceType.value)+1))*Number(amount.value-1);--//
-    //--If there's a bonus, it gets added here--//
-    var totalRoll = Number(total.reduce((a, b) => a + b, 0) + Number(bonus.value));
+  if (bonus.value == "") {
+    bonus.value = 0;
+  }
 
-    if( bonus.value == "" ){
-        bonus.value = 0;
-    }
+  if (bonus.value >= 0) {
+    signo = "+ " + bonus.value;
+  } else {
+    signo = bonus.value;
+  }
+  everySum.innerHTML =
+    "Your roll was: " +
+    amount.value +
+    "d" +
+    diceType.value +
+    "(" +
+    total +
+    ") " +
+    signo +
+    " = ";
+  everyResult.innerHTML = totalRoll;
+  if(totalRoll < 10){
+    rolls.innerHTML = "The domain of shame presents, your rolls: " + oldRolls;
+  } else{
+    rolls.innerHTML = "You should be proud! Here are your rolls: " + oldRolls;
+  }
 
-    if (bonus.value >= 0){
-        signo = "+ " + bonus.value;
-
-    } else {
-        signo = bonus.value;
-    }
-    everySum.innerHTML ="Your roll was: " + amount.value + "d"+diceType.value+"("+total+") " + signo + " = " ;
-    everyResult.innerHTML = totalRoll;
-
-    amount.value = "1";
-    diceType.value = "20";
-    bonus.value = "1";
-
-
-  
 }
-
-
-
 
 /*function rollDie(){
 
@@ -151,8 +157,3 @@ default:
 
 };
 */
-
-
-
-
-

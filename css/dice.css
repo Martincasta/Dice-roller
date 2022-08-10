@@ -52,6 +52,8 @@ border-radius: 10px;
   align-items: left;
   background: rgb(26, 26, 64);
   color: #72d8d8;
+  outline:none;
+  resize:none;
 }
 
 .bonus-title{
@@ -79,19 +81,32 @@ padding: auto;
 .sum{
   text-align: center;
   padding-top:1%;
+  overflow-wrap: break-word;
 }
 .result{
   text-align: center;
   padding: 2%;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 .resultArea{
   margin: 10px 10px 30px 45%;
-  width: 400px;
-  height:20%;
+  width: 500px;
+  height:max-content;
   background: rgb(45, 44, 94);
   border-radius:10px;
   text-align: center;
+  box-shadow: 0 1px 0 0 darkslategrey;
+}
+.oldRolls{
+  margin: 10px 10px 30px 45%;
+  width: 200px;
+  height:max-content;
+  background: rgb(45, 44, 94);
+  border-radius:10px;
+  text-align: center;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 
 button {
@@ -102,7 +117,7 @@ button {
   margin-right:1%;
   background: #2bb9b0;
   border: none;
-  box-shadow: 3px 3px 3px #000;
+  box-shadow: 3px 3px 3px darkslategrey;
   border-radius: 10px;
 }
 button:hover {
